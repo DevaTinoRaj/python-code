@@ -37,3 +37,38 @@ Enter a celebrity:Rock
 Rose are Red
 sky are blue
 I love Rock
+
+
+#############################################################
+guess number 
+
+import random
+
+num =random.randint(1, 20)
+
+guess =int(input("can you guess the number!its bleow 20 "))
+
+while num != guess:
+    if guess > num:
+        print("your guess in higher")
+    else:
+        print("your guess is lower")
+    guess =int(input("guess agian:"))
+print ("you won")
+
+
+output 
+can you guess the number!its bleow 20 12
+your guess in higher
+guess agian:2
+your guess is lower
+guess agian:5
+your guess is lower
+guess agian:15
+your guess in higher
+guess agian:11
+you won
+
+####################################################
+
+
