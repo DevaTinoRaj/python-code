@@ -31,12 +31,12 @@ print ("I love " + celebrity)
 
 output
 
-Enter a colour:Red
-Enter a PLural noun:sky
-Enter a celebrity:Rock
-Rose are Red
-sky are blue
-I love Rock
+    Enter a colour:Red
+    Enter a PLural noun:sky
+    Enter a celebrity:Rock
+    Rose are Red
+    sky are blue
+    I love Rock
 
 
 #############################################################
@@ -58,16 +58,16 @@ print ("you won")
 
 
 output 
-can you guess the number!its bleow 20 12
-your guess in higher
-guess agian:2
-your guess is lower
-guess agian:5
-your guess is lower
-guess agian:15
-your guess in higher
-guess agian:11
-you won
+    can you guess the number!its bleow 20 12
+    your guess in higher
+    guess agian:2
+    your guess is lower
+    guess agian:5
+    your guess is lower
+    guess agian:15
+    your guess in higher
+    guess agian:11
+    you won
 
 ####################################################
 ROCK PAPER SICESSOR GAME
@@ -102,4 +102,78 @@ else:
 
 
 OUTPUT 
-SYNTAX ERROR
+    SYNTAX ERROR
+
+####################################################################
+ROCK PAPER SCISSORS
+
+import random
+
+while True:
+    choices = ["rock","paper","scissors"]
+
+    computer = random.choice(choices)
+    player = None
+
+    while player not in choices:
+        player = input("rock, paper, or scissors?: ")
+
+    if player == computer:
+        print("computer: ",computer)
+        print("player: ",player)
+        print("Tie!")
+
+    elif player == "rock":
+        if computer == "paper":
+            print("computer: ", computer)
+            print("player: ", player)
+            print("You lose!")
+        if computer == "scissors":
+            print("computer: ", computer)
+            print("player: ", player)
+            print("You win!")
+
+    elif player == "scissors":
+        if computer == "rock":
+            print("computer: ", computer)
+            print("player: ", player)
+            print("You lose!")
+        if computer == "paper":
+            print("computer: ", computer)
+            print("player: ", player)
+            print("You win!")
+
+    elif player == "paper":
+        if computer == "scissors":
+            print("computer: ", computer)
+            print("player: ", player)
+            print("You lose!")
+        if computer == "rock":
+            print("computer: ", computer)
+            print("player: ", player)
+            print("You win!")
+
+    play_again = input("Play again? (yes/no): ")
+
+    if play_again != "yes":
+        break
+
+output
+    rock, paper, or scissors?: rock
+    computer:  rock
+    player:  rock
+    Tie!
+    Play again? (yes/no): yes
+    rock, paper, or scissors?: paper
+    computer:  rock
+    player:  paper
+    You win!
+    Play again? (yes/no): yes
+    computer:  paper
+    player:  scissors
+    You win!
+    Play again? (yes/no): yes
+    rock, paper, or scissors?: rock
+    computer:  paper
+    player:  rock
+    You lose!
