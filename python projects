@@ -197,3 +197,38 @@ countdown(15)
 
 output 
 00:15 (15 counts)
+
+
+################################################################################
+password generator 
+
+
+from random import choice, sample
+
+letters_lower = "abcdefghijklmnopqrstuvwxyz"
+letters_upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+numbers = "0123456789"
+special_chars = "~!@#$%^&*()_+-{}[]"
+
+pool_all_chars = letters_lower + letters_upper + numbers + special_chars
+
+lower_1 = choice(letters_lower)
+lower_2 = choice(letters_lower)
+upper_1 = choice(letters_upper)
+upper_2 = choice(letters_upper)
+num_1 = choice(numbers)
+sp_char_1 = choice(special_chars)
+
+ex_char_1 = choice(pool_all_chars)
+ex_char_2 = choice(pool_all_chars)
+ex_char_3 = choice(pool_all_chars)
+ex_char_4 = choice(pool_all_chars)
+
+temp_pwd = lower_1 + lower_2 + upper_1 + upper_2 + num_1 + sp_char_1 + ex_char_1 + ex_char_2 + ex_char_3 + ex_char_4
+print("".join(sample(temp_pwd, len(temp_pwd))))
+
+
+
+output
+sljPZ+MSj3
+
